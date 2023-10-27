@@ -29,6 +29,16 @@ public class SeleniumTest {
     }
 
     @Test
+    public void RegisterAccount1() {
+        TestData.readTestData("TC002");
+        RegisterPage registerPage = new RegisterPage(DriverInit.getCurrentDriver());
+        OpenAccountPage accountPage=new OpenAccountPage(DriverInit.getCurrentDriver());
+        registerPage.enterRegisterDetails();
+        String accountID=accountPage.OpenNewAccount();
+        AccountOverView.verifyAccount(accountID);
+    }
+
+    @Test
     public void RegisterAccount2() {
         TestData.readTestData("TC001");
         RegisterPage registerPage = new RegisterPage(DriverInit.getCurrentDriver());
