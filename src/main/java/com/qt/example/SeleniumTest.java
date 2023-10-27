@@ -46,6 +46,13 @@ public class SeleniumTest {
     }
 
     @Test
+    public void RegisterAccount5() {
+        TestData.readTestData("TC001");
+        RegisterPage registerPage = new RegisterPage(DriverInit.getCurrentDriver());
+        registerPage.enterRegisterDetails();
+    }
+
+    @Test
     public void RegisterAccoun3() {
         TestData.readTestData("TC001");
         RegisterPage registerPage = new RegisterPage(DriverInit.getCurrentDriver());
