@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="D:/Qt_Project/SeleniumProject/src/test/java/org/example/SeleniumTest.java">
+        <classes>
+            <class name="org.example.SeleniumTest">
+                <methods>
+                    <include name="RegisterAccount"/>
+                    <exclude name="RegisterAccount2"/>
+                    <include name="RegisterAccoun3"/>
+                    <exclude name="RegisterAccoun4"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

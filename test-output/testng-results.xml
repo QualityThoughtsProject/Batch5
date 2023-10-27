@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-10-19T16:22:45 IST" name="All Test Suite" finished-at="2023-10-19T16:23:40 IST" duration-ms="55832">
+    <groups>
+    </groups>
+    <test started-at="2023-10-19T16:22:45 IST" name="D:/Qt_Project/SeleniumProject/src/test/java/org/example/SeleniumTest.java" finished-at="2023-10-19T16:23:40 IST" duration-ms="55832">
+      <class name="org.example.SeleniumTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:org.example.SeleniumTest@7d3a22a9]" started-at="2023-10-19T16:22:45 IST" name="beforeMethod" finished-at="2023-10-19T16:22:59 IST" duration-ms="14131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="RegisterAccount()[pri:0, instance:org.example.SeleniumTest@7d3a22a9]" started-at="2023-10-19T16:22:59 IST" name="RegisterAccount" finished-at="2023-10-19T16:23:17 IST" duration-ms="18258" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterAccount -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:org.example.SeleniumTest@7d3a22a9]" started-at="2023-10-19T16:23:17 IST" name="afterMethod" finished-at="2023-10-19T16:23:19 IST" duration-ms="1783" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:org.example.SeleniumTest@7d3a22a9]" started-at="2023-10-19T16:23:19 IST" name="beforeMethod" finished-at="2023-10-19T16:23:35 IST" duration-ms="15624" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="RegisterAccoun3()[pri:0, instance:org.example.SeleniumTest@7d3a22a9]" started-at="2023-10-19T16:23:35 IST" name="RegisterAccoun3" finished-at="2023-10-19T16:23:40 IST" duration-ms="4954" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterAccoun3 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:org.example.SeleniumTest@7d3a22a9]" started-at="2023-10-19T16:23:40 IST" name="afterMethod" finished-at="2023-10-19T16:23:40 IST" duration-ms="908" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- org.example.SeleniumTest -->
+    </test> <!-- D:/Qt_Project/SeleniumProject/src/test/java/org/example/SeleniumTest.java -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
