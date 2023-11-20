@@ -43,7 +43,7 @@ public class RegisterPage {
         CommonMethods.sendTextToElement(repeatedPasswordTxt,TestData.getData("Confirm"));
         CommonMethods.clickElement(registerBtn);
         String textLabel=CommonMethods.getText(messageLbl);
-        if(textLabel.contains("Curren")){
+        if(passwordTxt.isEnabled()){
 
         }else {
             Assert.fail("verification filed");

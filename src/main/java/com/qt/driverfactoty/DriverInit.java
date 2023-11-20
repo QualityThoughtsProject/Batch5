@@ -1,5 +1,7 @@
 package com.qt.driverfactoty;
+import com.qt.utils.ExReporter;
 import com.qt.utils.ProjectConfig;
+import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -7,19 +9,20 @@ import java.time.Duration;
 
 public class DriverInit {
 
-    static WebDriver driver;
-    public static void initiateDriver(){
-        driver=new ChromeDriver();
-        driver.get(ProjectConfig.getPropertyValues("URL"));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        driver.manage().window().maximize();
+   static ThreadLocal<WebDriver>driver=new ThreadLocal<>();
+    public static void initiateDriver(String url){
+        driver.set(new ChromeDriver());
+        driver.get().get(ProjectConfig.getPropertyValues("URL"));
+        driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        driver.get().manage().window().maximize();
+        ExReporter.log(LogStatus.PASS,"Browser Launched "+url);
     }
 
     public static WebDriver getCurrentDriver(){
-        return driver;
+        return driver.get();
     }
 
     public static void closeDriver(){
-        driver.close();
+        driver.get().close();
     }
 }

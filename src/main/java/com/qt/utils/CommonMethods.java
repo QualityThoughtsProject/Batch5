@@ -1,6 +1,7 @@
 package com.qt.utils;
 
 import com.qt.driverfactoty.DriverInit;
+import com.relevantcodes.extentreports.LogStatus;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -23,7 +24,9 @@ public class CommonMethods {
     public static void clickElement(WebElement ele){
         try{
             ele.click();
+            ExReporter.log(LogStatus.INFO,"Element Clicked "+ele);
         }catch(Exception e){
+            ExReporter.log(LogStatus.FAIL,"Unable to click Element "+ele);
             Assert.fail("Unable to click "+e.getMessage());
         }
     }
@@ -32,7 +35,7 @@ public class CommonMethods {
         try{
             ele.sendKeys(text);
         }catch (Exception e){
-            System.out.println("Unable to enter text "+e.getMessage());
+            Assert.fail("Unable to enter text "+e.getMessage());
         }
     }
 
@@ -43,13 +46,15 @@ public class CommonMethods {
 
 
     /** This method is used to toke screenshot **/
-    public static void takeScreenshot(){
+    public static String takeScreenshot(){
         try {
             File file = ((TakesScreenshot) DriverInit.getCurrentDriver()).getScreenshotAs(OutputType.FILE);
             File filePath = new File(System.getProperty("user.dir") + "//Reports//" + file.getName());
             FileUtils.copyFile(file, filePath);
+            return filePath.getName();
         }catch (Exception e){
             System.out.println("Unable to take screenshot");
+            return null;
         }
     }
 

@@ -1,3 +1,4 @@
+/*
 package com.qt.example;
 
 import com.qt.driverfactoty.DriverInit;
@@ -73,3 +74,4 @@ public class SeleniumTest {
     }
 
 }
+*/

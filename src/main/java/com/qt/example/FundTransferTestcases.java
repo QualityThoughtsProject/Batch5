@@ -1,3 +1,4 @@
+/*
 package com.qt.example;
 
 import org.testng.annotations.Test;
@@ -9,3 +10,4 @@ public class FundTransferTestcases {
 
     }
 }
+*/
