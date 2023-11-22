@@ -2,6 +2,8 @@ package com.qt.example;
 
 import org.testng.annotations.*;
 
+import java.util.Arrays;
+
 public class ExampleClass {
 
     @BeforeSuite
@@ -56,5 +58,12 @@ public class ExampleClass {
     @AfterSuite
     public void afterSuite(){
         System.out.println("After Suite");
+    }
+
+    public static void main(String[] args) {
+        int [] a = {85,65,29,74,12,3,5,69,364,7412};
+        Arrays.sort(a);
+        int b = a.length-1;
+        System.out.println(Arrays.toString(a));
     }
 }
